@@ -128,6 +128,12 @@ class Lexer(object):
         return Token(EOF, None)
 
 
+# PARSER
+
+class AST(object):
+    pass
+
+
 def main():
     import sys
 
