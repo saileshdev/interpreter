@@ -2,6 +2,34 @@
 
 This is an interpreter written in python which parsers a Domain Specific Language.
 
+## Grammar of the DSL
+
+    compound_statement : BEGIN statement_list END
+
+    statement_list : statement
+                   | statement SEMI statement_list
+
+    statement : compound_statement
+              | assignment_statement
+              | empty
+
+    assignment_statement : variable ASSIGN expr
+
+    empty :
+
+    expr: term ((PLUS | MINUS) term)*
+
+    term: factor ((MUL | DIV) factor)*
+
+    factor : PLUS factor
+           | MINUS factor
+           | INTEGER
+           | LPAREN expr RPAREN
+           | variable
+
+    variable: ID
+
+
 ## Sample DSL program
 
 ```
