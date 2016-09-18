@@ -150,6 +150,10 @@ class UnaryOp(AST):
         self.token = self.op = op
         self.expr = expr
 
+class Compound(AST):
+    def __init__(self):
+        self.children = []
+
 def main():
     import sys
 
