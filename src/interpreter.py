@@ -15,6 +15,7 @@ RESERVED_KEYWORDS = {
 def main():
     import sys
 
+    text = open(sys.argv[1], 'r').read()
     lexer = Lexer(text)
     parser = Parser(lexer)
     interpreter = Interpreter(parser)
