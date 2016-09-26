@@ -2,6 +2,14 @@
 
 This is an interpreter written in python which parsers a Domain Specific Language.
 
+## Running locally
+
+```sh
+git clone https://github.com/saileshdev/interpreter
+cd interpreter/src
+python interpreter.py ./../parse/dsl_program
+```
+
 ## Grammar of the DSL
 
     compound_statement : BEGIN statement_list END
