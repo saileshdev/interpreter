@@ -6,13 +6,6 @@
     'BEGIN', 'END', 'SEMI', 'DOT', 'EOF'
 )
 
-
-RESERVED_KEYWORDS = {
-    'BEGIN': Token('BEGIN', 'BEGIN'),
-    'END': Token('END', 'END'),
-}
-
-
 class Token(object):
     def __init__(self, type, value):
         self.type = type
@@ -27,6 +20,11 @@ class Token(object):
     def __repr__(self):
         return self.__str__()
 
+
+RESERVED_KEYWORDS = {
+    'BEGIN': Token('BEGIN', 'BEGIN'),
+    'END': Token('END', 'END'),
+}
 
 # LEXER
 
